@@ -1,0 +1,56 @@
+========================================================================
+🏭 FACTORY COMPLIANCE & ALERT ESCALATION SYSTEM — DATASET REGISTRY
+========================================================================
+
+[NOTICE FOR EVALUATION REVIEWERS]
+The complete raw surveillance video dataset utilized to evaluate this system
+exceeds 10 GB in uncompressed size. In alignment with production-grade 
+software practices and GitHub resource allocation rules, these heavy binary 
+media assets have been omitted from repository tracking using a explicit 
+.gitignore file policy.
+
+Follow the instructions below to acquire or reconstruct the target data assets.
+
+------------------------------------------------------------------------
+1. OFFICIAL DATASET REFERENCE
+------------------------------------------------------------------------
+* Source Platform: Kaggle
+* Dataset Title: Video Dataset for Safe and Unsafe Behaviours
+* Core Target Canonical URL:
+  https://www.kaggle.com/datasets/trihhnggiang/video-dataset-for-safe-and-unsafe-behaviours
+
+------------------------------------------------------------------------
+2. AUTOMATED RECONSTRUCTION VIA NOTEBOOK (RECOMMENDED)
+------------------------------------------------------------------------
+The included Jupyter Notebook 'factory_compliance_system.ipynb' features an
+automated ingestion layer in Cell 2 utilizing the 'kagglehub' API client framework.
+
+To execute automated local synchronization:
+1. Ensure your local environment has authenticated Kaggle API keys set up 
+   (kaggle.json token placed in ~/.kaggle/ directory).
+2. Execute Cell 1 and Cell 2 inside the notebook.
+3. The script will automatically trigger a remote sync, stream down the 
+   relevant production floor files, extract them from your cache, and 
+   map them safely directly into your local workspace directory tree.
+
+------------------------------------------------------------------------
+3. MANUAL SPECIFICATIONS AND PLACEMENT
+------------------------------------------------------------------------
+If executing manual local layout mapping:
+1. Navigate to the Kaggle dataset URL provided above.
+2. Download the compressed archive package and extract its contents locally.
+3. Move or copy all video files (matching '.mp4' or '.avi' configurations) 
+   into the following relative workspace location:
+   
+   ./fcs/data/
+
+4. Confirm that the input tracking folder appears as:
+   ├── fcs/
+   │   ├── data/
+   │   │   ├── [Extracted surveillance video files here]
+   │   │   └── dataset_instructions.txt
+
+Once placed, execution loops inside the detection framework engine cells 
+will map automatically over the files to reconstruct the complete end-to-end 
+relational safety compliance database.
+========================================================================
